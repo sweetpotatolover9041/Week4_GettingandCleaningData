@@ -1,0 +1,19 @@
+CODEBOOK DESCRIBING VARIABLES
+
+Variables in the cleaned up dataset prior to averaging by activities and participants:
+
+All columns but the final two are descriptively named after the features provided by the 'features.txt' file.
+They represent variables extracted from biometric sensor data captured by the participants' wearables.
+
+The second last column (named 'activities') contains descriptive labels of the activities participants were engaging in during this data collection.
+Eg. 'WALKING', 'SITTING'. 
+
+The final column contains data on the subjects whose data were collected. This column is named 'subjects' and goes from 1 to 30, covering the number of participants. 
+
+
+
+Variables in final dataset are:
+
+Column 1: subjects; containing the integers 1-30 representing separate participants.
+Column 2: activities; labelled descriptively as 'LAYING', 'SITTING' etc.
+Remaining columns: labelled by appropriate feature, and containing the average value for that feature as a function of participant and activity.
