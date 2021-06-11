@@ -96,12 +96,4 @@ duplicates_removed <-merged_data %>% subset(., select=which(!duplicated(names(.)
 
 ### Final table with averages ###
 
-#output =
-#  duplicates_removed %>%
-#  group_by(subjects,activities) %>%
-#  #summarise_at(vars(-activities,-subjects), funs(mean(., na.rm=TRUE)))
-  #summarise_at(vars=1:ncol(duplicates_removed)-2, list(mean=mean))
-#  summarise_if(is.numeric(.), list(mean=mean))
-#levels(factor(duplicates_removed))
-
 final_datatable = aggregate(. ~ subjects + activities, data = duplicates_removed, FUN = mean)
