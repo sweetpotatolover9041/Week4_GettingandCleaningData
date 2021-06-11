@@ -21,4 +21,4 @@ Step 7: Merge the resulting vector of descriptive activity labels with the main 
 
 Step 8: To create an independent dataset containing the average for each variable, activity, and feature, I next need to load up the subject data. I use setwd() and read.table() to set my working directory to the appropriate folders and extract the 'subject_test.txt' and 'subject_train.txt' data. I bind these together using rbind() and merge with the main daataframe using cbind(). I then rename that nexly added column (which is currently named V1) to 'subjects'. 
 
-Step 9: After removing some duplicate columns, I set up a dplyr pipe where the input is the dataset (minus duplicates). I use the group_by() function to split it by subjects and activities, and then run the colMeans function on the output (excluding the columns that contain the subject data and activity data) to get the grouped averages for each feature. This resulting table is called 'final_table'.
+Step 9: After removing some duplicate columns, I use the aggregate() function to calculate average features for each feature, separately for each subject and activity.  This resulting table is called 'final_datatable'.
